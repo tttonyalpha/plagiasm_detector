@@ -112,7 +112,6 @@ moving_average.py
 mrmr_selection.py
 multisim.py
 mxnet.py
-my_test.py
 naive.py
 nearest.py
 normal.py

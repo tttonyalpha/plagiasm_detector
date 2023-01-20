@@ -29,7 +29,7 @@ class Vst(ast.NodeVisitor):
         # print(type(node).__name__)
 
         # общая структура программы
-        if isinstance(node, ast.stmt) or isinstance(node, ast.expr):
+        if (isinstance(node, ast.stmt) or isinstance(node, ast.expr)) and not isinstance(node, ast.Expr):
             self.dict['structure'].append(type(node).__name__)
 
         self.generic_visit(node)
@@ -127,7 +127,7 @@ def main():
                                constants_score, structure_score)
                 # print(final_score)
                 foutput.write(
-                    f"{marked_score} {names_score} {operators_score} {constants_score} {structure_score}\n")
+                    f"{marked_score} {names_score} {operators_score} {constants_score} {imports_score} {structure_score}\n")
 
     foutput.close()
 
