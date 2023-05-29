@@ -3,7 +3,7 @@
 ------------------------------------------------
 # Code plagiasm detector 
 
-This is a code plagiarism detector that allows you to detect plagiarism between a large corpus of code. The main idea is to calculate embeddings of texts using various methods, and prediction based on these embedding using a fully connected neural network
+This is a code plagiarism detector that allows you to detect plagiarism between a large corpus of code. The main idea is to calculate embeddings of texts using various methods and predict based on these embeddings using a fully connected neural network
 
 ## Installation
 The package is tested under Python 3. It can be installed via:
