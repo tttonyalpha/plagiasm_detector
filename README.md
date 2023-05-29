@@ -1,13 +1,25 @@
-# Детектор плагиата кода на python
-В решении я использовал библиотеку ast, которая строит абстрактное синтактическое дерево программы на python. Для работы с программой через консоль использовалась библиотека argparse. 
 
-Идея решения: для каждой программы мы строим аст дерево, обходим его и собираем различные токены в списки, потом, при анализе схожести, считаем расстояние Дамерау-Левенштейна между двумя списками токенов.
 
-Для анализа я выделил следующие виды токенов:
-1) имена переменных и функций 
-2) бинарные операции 
-3) числовые константы 
-4) имена импортнутых библиотек 
-5) общая струкрута программы: объявление функций, классов, циклы, импорты, присваивания, сравнения 
+------------------------------------------------
+# Code plagiasm detector 
 
-Для каждого из списка токенов мы считаем расстояние Дамерау-Левенштейна, итоговый score получается как скалярное произведение вектора scor-ов для разных видов токенов на вектор весов. Веса я подбирал с помощью линейной регрессии, размечал данные вручную. По итогу моя модель выдала следующие результаты: w_1 = 0.6 w_2 = 0.2 w_3 = 0.1 w_4 = 0.2 w_5 = 0 В списывании я бы подозревал тексты со score > 0.55
+This is a code plagiarism detector that allows you to detect plagiarism between a large corpus of code. The main idea is to calculate embeddings of texts using various methods, and prediction based on these embedding using a fully connected neural network
+
+## Installation
+The package is tested under Python 3. It can be installed via:
+```
+git clone https://github.com/tttonyalpha/plagiasm_detector
+```
+
+## Usage
+
+Now you need to put all the files in one folder and run the program from source code directory using comand
+
+```bash
+python3 ./predict.py path/to/folder/with/input/code
+
+
+```
+
+## Supported languages
+My program employs [tree-sitter](https://tree-sitter.github.io/tree-sitter/) as a backend therefore supports all languages from there 
