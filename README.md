@@ -2,6 +2,8 @@
 
 ------------------------------------------------
 # Code plagiasm detector 
+![image](https://github.com/tttonyalpha/plagiasm_detector/assets/79598074/8491129c-15ef-4a5d-9430-60602e980e36)
+
 
 This is a code plagiarism detector that allows you to detect plagiarism between a large corpus of code. The main idea is to calculate embeddings of texts using various methods and predict based on these embeddings using a fully connected neural network
 
