@@ -27,7 +27,7 @@ My program employs [tree-sitter](https://tree-sitter.github.io/tree-sitter/) as 
 
 ## References
 <a id="1">[1]</a> 
-A large-scale computational study of content preservation measures for text style transfer and paraphrase generation. 
+A large-scale computational study of content preservation measures for text style transfer and paraphrase generation <br>
 Nikolay Babakov, David Dale, Varvara Logacheva, Alexander Panchenko <br>
 [aclanthology.org](https://aclanthology.org/2022.acl-srw.23.pdf)
 
